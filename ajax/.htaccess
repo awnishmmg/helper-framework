@@ -1,0 +1,4 @@
+RewriteEngine On
+php_value auto_prepend_file none
+php_value auto_prepend_file '../config/autoloader.php'
+
