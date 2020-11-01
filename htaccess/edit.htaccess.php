@@ -1,7 +1,7 @@
 <?php
 
 if($_REQUEST['cmd']){
-	if($_SERVER['REQUEST_METHOD']==='GET'){
+	if($_SERVER['REQUEST_METHOD']=='GET'){
 		if(isset($_REQUEST['line'])){
 
 			$lines =  $_REQUEST['line'];

@@ -1,3 +1,5 @@
 <?php
+
 htaccess_reader('.');
+
 

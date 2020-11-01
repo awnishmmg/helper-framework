@@ -1,11 +1,10 @@
 <?php
 define('autoloading',TRUE,1);
 
+$autoload['define']=array('lang','error');
+$autoload['config']=array('database','define');
 
-
-$autoload['config']=array('database');
-
-$autoload['library'] =array('query-builder','model-loader');
+$autoload['library'] =array('query-builder.class','model-loader.class');
 
 #Helpers Loaders
 
@@ -21,7 +20,7 @@ $modular['admin']='admin';
 $modular['ajax']='ajax';
 
 #Add the Code Snippet
-$autoload['snippet']=array('code');
+#$autoload['snippet']=array('code');
 
 
 ?>

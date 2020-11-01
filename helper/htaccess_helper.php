@@ -49,20 +49,28 @@ function start_reading($htaccess_file){
 #Function name  : iterator for iterating each line of code
 function iterator($htaccess_data){
 
-
 echo <<<BLOCK
 	<h4>Rewrite Rules Written On file </h4>
 	<a href='{$_SERVER['PHP_SELF']}?cmd=add'>Add</a>
 	<hr noshade/>
 	<table width='100%'>
 BLOCK;
+
 foreach($htaccess_data as $lines => $rules):
 	echo "<tr>";
 	echo "<td><b>Line No : {$lines} </b></td>";
 	echo "<td style='background:yellow;'>$rules</td>";
-	echo "<td><a href='".$_SERVER['PHP_SELF']."?cmd=edit'><b>Edit</a></td>";
-	echo "</tr>";
+
+	if(!in_array($lines, [1,2])):
+		
+						echo "<td><a href='".$_SERVER['PHP_SELF']."?cmd=edit&line={$lines}'><b>Edit</a></td>";
+						echo "<td><a href='".$_SERVER['PHP_SELF']."?cmd=delete&line={$lines}'><b>Delete</a></td>";
+						echo "</tr>";
+	endif;
+
 endforeach;
-echo "<table>";
+
+echo "</table>";
+
 
 }
