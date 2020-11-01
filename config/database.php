@@ -1,9 +1,9 @@
 <?php
 
 $hostname = 'localhost';
-$username = 'root';
+$username = 'awnishmmg';
 $password = '';
-$dbname='practise';
+$dbname='angulardb';
 
 
 $con=mysqli_connect($hostname,$username,$password,$dbname);

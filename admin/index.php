@@ -1,5 +1,5 @@
 <?php
 
-prx('admin index page');
+prx('admin index.php');
 
 ?>

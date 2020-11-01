@@ -1,5 +1,6 @@
 <?php
 
+//when data is submitted using post
 
 function parseobject(){
 	$object = [];
@@ -8,6 +9,14 @@ function parseobject(){
 	}
 	return $object;
 }
+
+
+//when data is submitted using json response
+function parsejson(){
+	$jsondata = json_decode(file_get_contents("php://input"),true);
+	return $jsondata;
+}
+
 
 
 ?>
